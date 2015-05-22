@@ -2,15 +2,15 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Multi Step Form</title>
+        <title>Multi Step Form with Rhinoslider 1.05</title>
         <link type="text/css" rel="stylesheet" href="css/rhinoslider-1.05.css" />
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/rhinoslider-1.05.min.js"></script>
         <script type="text/javascript" src="js/mousewheel.js"></script>
         <script type="text/javascript" src="js/easing.js"></script>
 		
-				<style>
-//laxmi narayan
+<style>
+/*custom font*/
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 /*basic reset*/
@@ -350,7 +350,7 @@ overflow:hidden;
 
 
 
-                var info = ["PERSONAL DETAILS","ACCOUNT DETAILS","CONTACT DETAILS","higher"];
+                //var info = ["PERSONAL DETAILS","ACCOUNT DETAILS","CONTACT DETAILS","higher"];
                 var images = ["personal-details-icon.png","account-details.png","contact-details.png","contact-details.png"];
                 $('.rhino-bullet').each(function(index){
                     $(this).html('<p style="margin: 0pt; font-size: 13px; font-weight: bold;"><img src="./img/'+
@@ -380,6 +380,47 @@ overflow:hidden;
                         step3_validation();
                         break;
 						
+					case 'rhino-item3':
+					step4_validation();
+					break;
+					
+					case 'rhino-item4':
+					step5_validation();
+					break;
+					
+					
+					case 'rhino-item5':
+					step6_validation();
+					break;
+					
+					case 'rhino-item6':
+					step7_validation();
+					break;
+					
+					case 'rhino-item7':
+					step8_validation();
+					break;
+					
+					case 'rhino-item8':
+					step9_validation();
+					break;
+					
+					case 'rhino-item9':
+					step10_validation();
+					break;
+					
+					case 'rhino-item10':
+					step11_validation();
+					break;
+					
+					case 'rhino-item11':
+					step12_validation();
+					break;
+					
+					case 'rhino-item12':
+					step13_validation();
+					break;
+						
 						
                 }
 				
@@ -390,18 +431,12 @@ overflow:hidden;
 
                 var err = 0;
 
-              if($('input[name="purpose"]:checked').length==0){
-                    $('#purpose').parent().parent().find('.form-error').html("First Name is Required");
+              if($('input[name="where_you_are"]:checked').length==0){
+                   // $('.field_where_you').parent().parent().find('.form-error').html("Please select where you are");
+				   alert("Please select where you are");
                     err++;
                 }
-                if($('#lname').val() == ''){
-                    $('#lname').parent().parent().find('.form-error').html("Last Name is Required");
-                    err++;
-                }
-                if($('#gender').val() == '0'){
-                    $('#gender').parent().parent().find('.form-error').html("Please Select Gender");
-                    err++;
-                }
+                
                 if(err == 0){
                     $(".rhino-active-bullet").removeClass("step-error").addClass("step-success");
                     $(".rhino-next").show();
@@ -417,18 +452,12 @@ overflow:hidden;
             var step2_validation = function(){
                 var err = 0;
 
-                if($('#username').val() == ''){
-                    $('#username').parent().parent().find('.form-error').html("Username is Required");
+                  if($('input[name="purpose"]:checked').length==0){
+                    //$('.feildset-purpose').parent().parent().find('.form-error').html("Please select purpose");
+					alert("Please select purpose");
                     err++;
                 }
-                if($('#pass').val() == ''){
-                    $('#pass').parent().parent().find('.form-error').html("Password is Required");
-                    err++;
-                }
-                if($('#cpass').val() == ''){
-                    $('#cpass').parent().parent().find('.form-error').html("confirm Password is Required");
-                    err++;
-                }
+                
                 
                 if(err == 0){
                     $(".rhino-active-bullet").removeClass("step-error").addClass("step-success");
@@ -444,8 +473,205 @@ overflow:hidden;
             var step3_validation = function(){
                 var err = 0;
 
-                if($('#email').val() == ''){
-                    $('#email').parent().parent().find('.form-error').html("Email is Required");
+                if($('input[name="property_type"]:checked').length==0){
+                    //$('.fieldset-property-type').parent().parent().find('.form-error').html("Please select property type");
+					alert("please select property type");
+                    err++;
+                }
+                if(err == 0){
+                    $(".rhino-active-bullet").removeClass("step-error").addClass("step-success");
+                    $(".rhino-next").show();
+                    $('.form-submit').hide();
+                    $('.rhino-next').trigger('click');
+                }else{
+                    $(".rhino-active-bullet").removeClass("step-success").addClass("step-error");
+                }
+
+            };
+			
+			
+			 var step4_validation = function(){
+                var err = 0;
+
+                if($('#no_day_stay').val() == ''){
+                    //$('.fieldset_no_ofdays').parent().parent().find('.form-error').html("Please enter no of days");
+					alert("Please enter no of days");
+                    err++;
+                }
+                if(err == 0){
+                    $(".rhino-active-bullet").removeClass("step-error").addClass("step-success");
+                    $(".rhino-next").show();
+                    $('.form-submit').hide();
+                    $('.rhino-next').trigger('click');
+                }else{
+                    $(".rhino-active-bullet").removeClass("step-success").addClass("step-error");
+                }
+
+            };
+			
+			
+			 var step5_validation = function(){
+                var err = 0;
+
+                if($('#budget_price').val() == ''){
+                    //$('.fieldset_budget').parent().parent().find('.form-error').html("Please enter budget price");
+					alert("Please enter budget price");
+                    err++;
+                }
+                if(err == 0){
+                    $(".rhino-active-bullet").removeClass("step-error").addClass("step-success");
+                    $(".rhino-next").show();
+                    $('.form-submit').hide();
+                    $('.rhino-next').trigger('click');
+                }else{
+                    $(".rhino-active-bullet").removeClass("step-success").addClass("step-error");
+                }
+
+            };
+			
+			
+			
+			var step6_validation = function(){
+                var err = 0;
+
+                if($('#from_date').val() == '' && $('#to_date').val() == ''){
+                   // $('.fieldset_travel_date').parent().parent().find('.form-error').html("Please choose both from and to date");
+				   alert("Please choose both from and to date");
+                    err++;
+                }
+                if(err == 0){
+                    $(".rhino-active-bullet").removeClass("step-error").addClass("step-success");
+                    $(".rhino-next").show();
+                    $('.form-submit').hide();
+                    $('.rhino-next').trigger('click');
+                }else{
+                    $(".rhino-active-bullet").removeClass("step-success").addClass("step-error");
+                }
+
+            };
+			
+			
+			   var step7_validation = function(){
+                var err = 0;
+
+                if($('input[name="thins_to_do"]:checked').length==0){
+                   // $('.fieldset_things_todo').parent().parent().find('.form-error').html("Please select the things");
+					 alert("Please select the things");
+                    err++;
+                }
+                if(err == 0){
+                    $(".rhino-active-bullet").removeClass("step-error").addClass("step-success");
+                    $(".rhino-next").show();
+                    $('.form-submit').hide();
+                    $('.rhino-next').trigger('click');
+                }else{
+                    $(".rhino-active-bullet").removeClass("step-success").addClass("step-error");
+                }
+
+            };
+			
+			 var step8_validation = function(){
+                var err = 0;
+
+                if($('input[name="flight_assistance"]:checked').length==0){
+                    //$('.fieldset_flight_assistance').parent().parent().find('.form-error').html("Please select flight assistance");
+					 alert("Please select flight assistance");
+                    err++;
+                }
+                if(err == 0){
+                    $(".rhino-active-bullet").removeClass("step-error").addClass("step-success");
+                    $(".rhino-next").show();
+                    $('.form-submit').hide();
+                    $('.rhino-next').trigger('click');
+                }else{
+                    $(".rhino-active-bullet").removeClass("step-success").addClass("step-error");
+                }
+
+            };
+			
+			var step9_validation = function(){
+                var err = 0;
+
+                if($('input[name="airport_transfer"]:checked').length==0){
+                    //$('.fieldset_air_transfer').parent().parent().find('.form-error').html("Please select transfer type");
+					 alert("Please select airport to resort transfer");
+                    err++;
+                }
+                if(err == 0){
+                    $(".rhino-active-bullet").removeClass("step-error").addClass("step-success");
+                    $(".rhino-next").show();
+                    $('.form-submit').hide();
+                    $('.rhino-next').trigger('click');
+                }else{
+                    $(".rhino-active-bullet").removeClass("step-success").addClass("step-error");
+                }
+
+            };
+			
+			var step10_validation = function(){
+                var err = 0;
+
+                if($('input[name="resort_type"]:checked').length==0){
+                   // $('.type_of_resort').parent().parent().find('.form-error').html("Please select resort type");
+					alert("Please select resort type");
+                    err++;
+                }
+                if(err == 0){
+                    $(".rhino-active-bullet").removeClass("step-error").addClass("step-success");
+                    $(".rhino-next").show();
+                    $('.form-submit').hide();
+                    $('.rhino-next').trigger('click');
+                }else{
+                    $(".rhino-active-bullet").removeClass("step-success").addClass("step-error");
+                }
+
+            };
+			
+			
+			var step11_validation = function(){
+                var err = 0;
+
+                if($('input[name="type_of_room"]:checked').length==0){
+                    //$('.fieldset_room_type').parent().parent().find('.form-error').html("Please select type of room");
+					alert("Please select type of room");
+                    err++;
+                }
+                if(err == 0){
+                    $(".rhino-active-bullet").removeClass("step-error").addClass("step-success");
+                    $(".rhino-next").show();
+                    $('.form-submit').hide();
+                    $('.rhino-next').trigger('click');
+                }else{
+                    $(".rhino-active-bullet").removeClass("step-success").addClass("step-error");
+                }
+
+            };
+			
+			
+			var step12_validation = function(){
+                var err = 0;
+
+                if($('input[name="meal_plan_type"]:checked').length==0){
+                    $('#meal_plan_type').parent().parent().find('.form-error').html("Please select meal type");
+                    err++;
+                }
+                if(err == 0){
+                    $(".rhino-active-bullet").removeClass("step-error").addClass("step-success");
+                    $(".rhino-next").show();
+                    $('.form-submit').hide();
+                    $('.rhino-next').trigger('click');
+                }else{
+                    $(".rhino-active-bullet").removeClass("step-success").addClass("step-error");
+                }
+
+            };
+			
+			
+			var step13_validation = function(){
+                var err = 0;
+
+                if($('input[name="meal_plan_category"]:checked').length==0){
+                    $('#meal_plan_category').parent().parent().find('.form-error').html("Please select meal category");
                     err++;
                 }
                 if(err == 0){
@@ -644,6 +870,48 @@ overflow:hidden;
 
                     <div id="slider">
 					
+						
+						
+						 <div class="form-step" >
+							<fieldset  class="field_where_you" style="background:url('1.png');background-size: cover;">
+								<h2 class="fs-title">Where are you today ?</h2>
+								<div class="img1" style="width:100%;overflow:hidden;"><br>
+									<img class="frame1-1-img">
+									<img class="frame1-2-img">
+									<img class="frame1-3-img">
+									<img class="frame1-4-img" >
+									<img class="frame1-5-img">
+									</br>
+								
+								</div>
+								<div class="label1" style="width:100%;overflow:hidden;">
+									<label>Bangalore</label>
+									<label>Hyderabad</label>
+									<label>Mumbai</label>
+									<label>Delhi</label>
+									<label>Other</label>
+								</div>
+
+								<div class="inpu1" style="width:100%;overflow:hidden;">
+
+									<input type="radio" name="where_you_are" id="bangalore" value="10" onclick="update(this.name,this.id,this.value)"/>
+									<input type="radio" name="where_you_are" id="hyderabad" value="20"  onclick="update(this.name,this.id,this.value)"/>
+									<input type="radio" name="where_you_are" id="mumbai" value="30"  onclick="update(this.name,this.id,this.value)"/>
+									<input type="radio" name="where_you_are" id="delhi" value="40"  onclick="update(this.name,this.id,this.value)"/>
+
+									<select name="choose_city" id="choose_city"  onchange="update(this.name,this.id,this.value)" >
+										<option value=""> Select City </option>
+										<option value="Chennai">Chennai </option>
+										<option value="Rajasthan"> Rajasthan </option>
+									</select><br/>
+								
+								</div>
+								<div class="form-error"></div>
+
+							</fieldset>
+							
+                        </div>
+						
 						<div class="form-step" >
 						<fieldset class="feildset-purpose"style="background-color:#3dbfd9;">
 							 <h2 class="fs-title" style="width: 23%;margin: 0 auto; padding: 10px;">Purpose</h2>
@@ -678,55 +946,17 @@ overflow:hidden;
 								
 								 <div class="form-error"></div>
 							</div>
-	
-	
+									
+								<div class="form-error"></div>
 							</fieldset>
 							
                           
 
                         </div>
 						
-                        <div class="form-step" >
-							<fieldset  class="field_where_you" style="background:url('1.png');background-size: cover;">
-								<h2 class="fs-title">Where are you today ?</h2>
-								<div class="img1" style="width:100%;overflow:hidden;"><br>
-									<img class="frame1-1-img">
-									<img class="frame1-2-img">
-									<img class="frame1-3-img">
-									<img class="frame1-4-img" >
-									<img class="frame1-5-img">
-									</br>
-								
-								</div>
-								<div class="label1" style="width:100%;overflow:hidden;">
-									<label>Bangalore</label>
-									<label>Hyderabad</label>
-									<label>Mumbai</label>
-									<label>Delhi</label>
-									<label>Other</label>
-								</div>
-
-								<div class="inpu1" style="width:100%;overflow:hidden;">
-
-									<input type="radio" name="where_you_are" id="bangalore" value="10" onclick="update(this.name,this.id,this.value)"/>
-									<input type="radio" name="where_you_are" id="hyderabad" value="20"  onclick="update(this.name,this.id,this.value)"/>
-									<input type="radio" name="where_you_are" id="mumbai" value="30"  onclick="update(this.name,this.id,this.value)"/>
-									<input type="radio" name="where_you_are" id="delhi" value="40"  onclick="update(this.name,this.id,this.value)"/>
-
-									<select name="choose_city" id="choose_city"  onchange="update(this.name,this.id,this.value)" >
-										<option value=""> Select City </option>
-										<option value="Chennai">Chennai </option>
-										<option value="Rajasthan"> Rajasthan </option>
-									</select><br/>
-								
-								</div>
-
-							</fieldset>
-							
-                        </div>
-						
 						<div class="form-step" >
-							<fieldset class="fieldset-property-type" style="background:url('images/frame3.png');background-size: cover;">
+							
+						<fieldset class="fieldset-property-type" style="background:url('images/frame3.png');background-size: cover;">
 								<h2 class="fs-title">Property type </h2>
 								<div class="property-main" style="width: 91%;overflow: hidden;margin-left: 105px;"><br>
 									
@@ -773,18 +1003,20 @@ overflow:hidden;
 									<label>others</label>
 									<br/>
 								</div>
-
-								<input type="button" name="previous" class="previous action-button" value="Previous"  style="margin-top:7%;"/>
-								<input type="button" name="next" class="next action-button" value="Next" style="margin-top:7%;" />
+								<div class="form-error"></div>
+								
 							</fieldset>
-                            
+							
                         </div>
 						
 						
-						<div class="form-step">
-							<fieldset style="background:url('images/background/4.png');background-size: cover;">
+						<div class="form-step" style="height:500px;">
+							<fieldset class="fieldset_no_ofdays" style="background:url('images/background/4.png');background-size: cover;">
 								<h2 class="fs-title">How many days stay ? </h2>
 								<input type="text" name="no_day_stay" id="no_day_stay" placeholder="No of Days" value="" onchange="update()" /><br/>
+								
+								
+								<div class="form-error"></div>
 							</fieldset>
                             
                         </div>
@@ -792,7 +1024,7 @@ overflow:hidden;
 						
 						
 						<div class="form-step">
-                            <fieldset style="background:url('images/background/5.png');background-size: cover;">
+                            <fieldset class="fieldset_budget" style="background:url('images/background/5.png');background-size: cover;">
 								<h2 class="fs-title">Budget </h2>
 
 								<input type="text" name="budget_price" id="budget_price" placeholder="" style="width:316px;margin-top:26px;" value="" /><br/><br/><br/>
@@ -800,9 +1032,8 @@ overflow:hidden;
 								<input type="range" name="budget" id="budget" placeholder=""  min="0" max="100" step="10" onchange="update(this.name,this.id,this.value)" style="width:400px;" />
 
 								<br/>
-
-								<input type="button" name="previous" class="previous action-button" value="Previous" style="margin-top:7%;" />
-								<input type="button" name="next" class="next action-button" value="Next" style="margin-top:7%;"/>
+								<div class="form-error"></div>
+							
 							</fieldset>
                         </div>
 						
@@ -810,65 +1041,170 @@ overflow:hidden;
 						
 						<div class="form-step">
 						
-							<fieldset style="background:url('images/background/6.png');background-size: cover;">
+							<fieldset class="fieldset_travel_date" style="background:url('images/background/6.png');background-size: cover;">
 								<h2 class="fs-title">Travel Date</h2>
 
-								<input type="date" name="fname" placeholder="From date" />
-								<input type="date" name="lname" placeholder="To date" />
+								<input type="date" name="from_date" id="from_date" placeholder="From date" />
+								<input type="date" name="to_date" id="to_date"  placeholder="To date" />
 								<br/>
 								<label>From Date</label>
 								<label>To Date</label>
 								<br/>
+								
+								<div class="form-error"></div>
 							</fieldset>
                             
                         </div>
 						
 						
+						
 						<div class="form-step">
 						
-								<fieldset class="fieldset_things_todo" style="background:url('images/background/7.png');background-size: cover;">
-	<h2 class="fs-title">Things to do </h2>
-	<div >
+							<fieldset class="fieldset_things_todo" style="background:url('images/background/7.png');background-size:cover;">
+								<h2 class="fs-title">Things to do </h2>
+								<div >
 
-	<input type="checkbox" name="thins_to_do" id="dive_in" value="200" onclick="update(this.name,this.id,this.value)"/>
-	<input type="checkbox" name="thins_to_do" id="surfing" value="400" onclick="update(this.name,this.id,this.value)"/>
-	<input type="checkbox" name="thins_to_do"  id="travel_island" value="600" onclick="update(this.name,this.id,this.value)"/><br/>
-	<input type="checkbox" name="thins_to_do" id="spa_welness" value="800"/>
+								<input type="checkbox" name="thins_to_do" id="dive_in" value="200" onclick="update(this.name,this.id,this.value)"/>
+								<input type="checkbox" name="thins_to_do" id="surfing" value="400" onclick="update(this.name,this.id,this.value)"/>
+								<input type="checkbox" name="thins_to_do"  id="travel_island" value="600" onclick="update(this.name,this.id,this.value)"/><br/>
+								<input type="checkbox" name="thins_to_do" id="spa_welness" value="800"/>
 
-	<input type="hidden" name="hidden_dive_in" id="hidden_dive_in" value="200" />
-	<input type="hidden" name="hidden_surfing" id="hidden_surfing" value="400"/>
-	<input type="hidden" name="hidden_travel_island" id="hidden_travel_island" value="600"/>
-	<input type="hidden" name="hidden_spa_welness" id="hidden_spa_welness" value="600"/>
-	</div>	
-	
-	<div>
+								<input type="hidden" name="hidden_dive_in" id="hidden_dive_in" value="200" />
+								<input type="hidden" name="hidden_surfing" id="hidden_surfing" value="400"/>
+								<input type="hidden" name="hidden_travel_island" id="hidden_travel_island" value="600"/>
+								<input type="hidden" name="hidden_spa_welness" id="hidden_spa_welness" value="600"/>
+								</div>	
+								
+								<div>
 
-	<label>Dive IN</label>
-	<label>Surfing</label>
-	<label>Travel To Unhabited islands </label>
-	<label>Spa & Welness</label>
-	<br/>
-	
-	</div>
+								<label>Dive IN</label>
+								<label>Surfing</label>
+								<label>Travel To Unhabited islands </label>
+								<label>Spa & Welness</label>
+								<br/>
+								
+								</div>
+								
+								<div class="form-error"></div>
 
-	<input type="button" name="previous" class="previous action-button" value="Previous" style="margin-top:7%;"/>
-	<input type="button" name="next" class="next action-button" value="Next" style="margin-top:7%;"/>
-</fieldset>
+							</fieldset>
+						</div>
+						
+						<div class="form-step">
+							<fieldset class="fieldset_flight_assistance" style="background:url('images/background/8.png');background-size: cover;">
+								<h2 class="fs-title">Flight Assistance </h2>
+
+								<input type="radio" name="flight_assistance" id="flight_assistance_yes" value="800" onclick="update(this.name,this.id,this.value)"/>
+								<input type="radio" name="flight_assistance"  id="flight_assistance_no" value="100" onclick="update(this.name,this.id,this.value)"/>
+								
+								<input type="hidden" name="hidden_flight_assistance" id="hidden_flight_assistance" value="800" />
+								<input type="hidden" name="hidden_flight_assistance" id="hidden_flight_assistance" value="100"/>
+
+								<br/>
+								<label>Yes </label>
+								<label>No </label>
+								<br/>
+								<div class="form-error"></div>
+
+							</fieldset>
+						
 						
                             
                         </div>
 						
 						
 						<div class="form-step">
+							<fieldset class="fieldset_air_transfer" style="background:url('images/background/9.png');background-size: cover;">
+								<h2 class="fs-title"> Airport to Resort Transfer  </h2>
+
+
+								<input type="radio" name="airport_transfer" id="spead_boat" value="1000" onclick="update(this.name,this.id,this.value)"/>
+								<input type="radio" name="airport_transfer" id="sea_plane"  value="2000" onclick="update(this.name,this.id,this.value)"/><br/>
+
+								<label>Speed Boat</label>
+								<label>Sea Plane</label>
+
+								<br/>
+								<div class="form-error"></div>
+							</fieldset>
+						 </div>
+						
+						
+						<div class="form-step">
+							<fieldset class="type_of_resort" style="background:url('images/background/10.png');background-size: cover;">
+								<h2 class="fs-title"> Type of Resort   </h2>
+
+								<input type="radio" name="resort_type" id="inclusive" value="5000" onclick="update(this.name,this.id,this.value)" />
+								<input type="radio" name="resort_type" id="full_board" value="1000" onclick="update(this.name,this.id,this.value)"/>
+								<input type="radio" name="resort_type" id="half_board" value="2000" onclick="update(this.name,this.id,this.value)" />
+								<input type="radio" name="resort_type" id="bed_breakfast" value="3000" onclick="update(this.name,this.id,this.value)"/>
+								
+								<input type="hidden" name="hidden_resort_type" id="hidden_inclusive" value="1000"/>
+								<input type="hidden" name="hidden_resort_type" id="hidden_full_board" value="1000"/>
+								<input type="hidden" name="hidden_resort_type" id="hidden_half_board" value="2000"/>
+								<input type="hidden" name="hidden_resort_type" id="hidden_bed_breakfast" value="3000"/>
+
+								<br/>
+
+								<label>All Inclusive</label>
+								<label>Full Board</label>
+								<label>Half Board</label>
+								<label>Bed & Breakfast</label>
+								<br/>
+								<div class="form-error"></div>
+								
+							</fieldset>
+						</div>
+						
+						<div class="form-step">
+							<fieldset class="fieldset_room_type" style="background:url('images/background/11.png');background-size: cover;">
+								<h2 class="fs-title"> Type of Room   </h2>
+								<input type="radio" name="type_of_room" id="beach_villa" value="100" onclick="update(this.name,this.id,this.value)" />
+								<input type="radio" name="type_of_room" id="water_villa" value="200" onclick="update(this.name,this.id,this.value)"/>
+								<input type="radio" name="type_of_room" id="villa_with_pool" value="300" onclick="update(this.name,this.id,this.value)"/><br/>
+
+								<input type="hidden" name="beach_villa_hidden" id="beach_villa_hidden" value="100"/>
+								<input type="hidden" name="water_villa_hidden" id="water_villa_hidden" value="200"/>
+								<input type="hidden" name="villa_with_pool_hiddens" id="villa_with_pool_hidden" value="300"/>
+
+								<label>Beach Villa</label>
+								<label>Water Villa</label>
+								<label>Villa with Pool</label><br/>
+									
+								<div class="form-error"></div>
+								
+							</fieldset>
+						</div>
+						
+						<div class="form-step">
+							<fieldset class="fieldset_meal_plan_type" style="background:url('images/background/12.png');background-size: cover;">
+								<h2 class="fs-title"> Meal Plan  </h2>
+								<input type="radio" name="meal_plan_type" id="vegetarian" value="" onclick="update(this.name,this.id,this.value)"/>
+								<input type="radio" name="meal_plan_type" id="Non-Vegetarian" value="" onclick="update(this.name,this.id,this.value)"/><br/>
+
+								<label>Vegetarian</label>
+								<label>Non-Vegetarian</label><br/>
+
+								<div class="form-error"></div>
+							</fieldset>
+						</div>
+						
+						<div class="form-step">
+							<fieldset class="fieldset_meal_plan_category"  style="background:url('images/background/12.png');background-size: cover;">
+								<h2 class="fs-title"> Meal Plan </h2>
+								<input type="checkbox" name="meal_plan_category" id="breakfast" value="200" onclick="update(this.name,this.id,this.value)"/>
+								<input type="checkbox" name="meal_plan_category" id="lunch" value="300" onclick="update(this.name,this.id,this.value)" />
+								<input type="checkbox" name="meal_plan_category" id="dinner" value="400" onclick="update(this.name,this.id,this.value)"/><br/>
+
+								<label>Breakfast</label>
+								<label>Lunch</label>
+								<label>dinner</label><br/>
+								<div class="form-error"></div>
+							</fieldset>
+						</div>
 						
 						
 						
-                            
-                        </div>
-						
-						
-						
-                    </div>
                 </form>
             </div>
         </div>
