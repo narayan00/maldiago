@@ -1,0 +1,487 @@
+  body { background-color:#fff; }
+            #wrapper{
+                border: 1px solid #DCDADA;
+                border-radius: 5px 5px 5px 5px;
+                box-shadow: 2px 2px 2px #E1E1E1;
+                background: #fff;
+                width:100%;
+                height:590px;
+                background:#f4f4f4;
+
+
+            }
+            #wrapper h3{
+                font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                font-size:16px;
+                height:60px;
+                //background:url(img/title.png) no-repeat left top;
+                margin:0;
+                padding:16px 0 0 20px;
+                text-shadow: 1px 1px 2px #000;
+                filter: dropshadow(color=#000, offx=1, offy=1);
+                color:#fff;
+            }
+            #slider {
+
+                background: #fff;
+                /*IE bugfix*/
+                padding:0;
+                margin:0;
+                width:700px;
+                height:400px;	
+
+            }
+
+            #slider li { list-style:none; }
+
+            #page {
+                width:100%;
+                margin:0 auto;
+            }
+
+            #slider{
+                color: #000;
+                background:#f4f4f4;
+                font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                font-size:12px;
+            }
+
+            .form-step{
+
+                padding:0% 0% !important;
+
+
+            }
+			
+			fieldset.feildset-purpose {
+				height: 725px;
+			}
+
+            .form-submit{
+                cursor: pointer;
+                display: block;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                -moz-user-select: none;
+                background: none repeat scroll 0 0 #6F95DC;
+                border-radius: 5px 5px 5px 5px;
+                color: #FFFFFF;
+                display: block;
+                margin: 0 20px 20px;
+                padding: 10px;
+                text-align: center;
+                width: 125px;
+                z-index: 10;
+                font-weight: bold;
+                text-decoration: none;
+                background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#94b9e9), to(#4870d2));
+                background-image: -moz-linear-gradient(#94b9e9, #4870d2);
+                background-image: -webkit-linear-gradient(#94b9e9, #4870d2);
+                background-image: -o-linear-gradient(#94b9e9, #4870d2);
+                filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#94b9e9, endColorstr=#4870d2)";
+                -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#94b9e9, endColorstr=#4870d2)";
+                font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+            }
+
+            .errorDisplay{
+                border:2px solid red;
+            }
+
+            .form-left{
+                color: #717171;
+                float: left;
+                font-size: 13px;
+                font-weight: bold;
+                padding: 5px;
+                width: 200px;
+            }
+            .form-right{
+                float: left;
+                width: 214px;
+            }
+            .row{
+                float: left;
+                margin: 5px 0;
+                width: 100%;
+            }
+            .form-step input[type='text']{
+                border: 1px solid #CFCFCF;
+                border-radius: 4px 4px 4px 4px;
+                height: 25px;
+                padding: 3px;
+                width: 200px;
+            }
+            select{
+                border-radius: 4px;
+                border: 1px solid #CFCFCF;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                background: #FFF;
+                padding: 2px;
+                height: 30px;
+                width:205px;
+                font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                font-size:12px;
+                background:#f4f4f4;
+            }
+
+            select option{
+                font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                font-size:12px;
+                background:#f4f4f4;
+                color:#717171;
+            }
+
+
+            .form-error{
+                color: red;
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            .step-error{
+                background:#f5715f !important;
+                color:#FFF !important;
+                -moz-box-shadow:1px 1px 4px #C6C4C4
+                    -webkit-box-shadow:1px 1px 4px #C6C4C4
+                    box-shadow:1px 1px 4px #C6C4C4
+            }
+            .step-success{
+                background:#72e487 !important;
+                color:#FFF !important;
+                -moz-box-shadow:1px 1px 1px 4px #C6C4C4
+                    -webkit-box-shadow:1px 1px 1px 4px #C6C4C4
+                    box-shadow:1px 1px 1px 4px #C6C4C4
+            }
+            .bullet-desc{
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*custom font*/
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+/*basic reset*/
+* {
+margin: 0;
+padding: 0;
+}
+html {
+height: 100%;
+/*Image only BG fallback*/
+//background: url('http://thecodeplayer.com/uploads/media/gs.png');
+/*background = gradient + image pattern combo*/
+//background: linear-gradient(rgba(196, 102, 0, 0.2), rgba(155, 89, 182, 0.2)),  url('http://thecodeplayer.com/uploads/media/gs.png');
+}
+body {
+font-family: montserrat, arial, verdana;
+background: rgb(214, 228, 247);
+}
+
+
+
+// img {
+// width: 180px;
+  // text-align: center;
+  // margin: 0 auto;
+  // background-image: url('1.1.png');
+  // background-repeat: no-repeat;
+  // background-position: 27px 1px;
+  // height: 154px;
+// }
+
+/*form styles*/
+#msform {
+  width: 94%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+#msform fieldset {
+background: white;
+border: 0 none;
+border-radius: 3px;
+box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+padding: 20px 30px;
+box-sizing: border-box;
+width: 80%;
+margin: 0 10%;
+/*stacking fieldsets above each other*/
+position: absolute;
+  height: 500px;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+padding: 15px;
+border: 1px solid #ccc;
+border-radius: 3px;
+margin-bottom: 10px;
+width:20%;
+box-sizing: border-box;
+font-family: montserrat;
+color: #2C3E50;
+font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+width: 100px;
+background: #27AE60;
+font-weight: bold;
+color: white;
+border: 0 none;
+border-radius: 1px;
+cursor: pointer;
+padding: 10px 5px;
+margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+font-size: 42px;
+  color: #2C3E50;
+  margin-bottom:3%;
+}
+.fs-subtitle {
+font-weight: normal;
+font-size: 13px;
+color: #666;
+margin-bottom: 17%;
+}
+/*progressbar*/
+#progressbar {
+// //margin-bottom: 50px;
+// overflow: hidden;
+// /*CSS counters to number the steps*/
+// counter-reset: step;
+// margin: 2% 25%;
+  // width: 77%;
+  
+  overflow: hidden;
+  counter-reset: step;
+  /* margin: 2% 25%; */
+  width: 60%;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+#progressbar li {
+list-style-type: none;
+color: white;
+text-transform: uppercase;
+font-size: 9px;
+width: 8%;
+float: left;
+position: relative;
+padding:1px;
+}
+#progressbar li:before {
+content: counter(step);
+counter-increment: step;
+width: 20px;
+line-height: 20px;
+display: block;
+font-size: 10px;
+color: #333;
+background: white;
+border-radius: 3px;
+margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+content: '';
+width: 100%;
+height: 2px;
+background: white;
+position: absolute;
+left: -50%;
+top: 9px;
+z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+/*connector not needed before the first step*/
+content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+background: #27AE60;
+color: white;
+}
+
+label {
+  //padding: 59px;
+}
+
+
+.img1 img, .img3 img, .img2 img{
+  width: 190px;
+  text-align: center;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: 31px -2px;
+  height: 154px;
+  float: left;
+}
+
+.img1 .frame1-1-img {
+	background-image: url('../images/frame1-1.png');
+ }
+ 
+ .img1 .frame1-2-img {
+	background-image: url('../images/frame1-2.png');
+ }
+ .img1 .frame1-3-img {
+	background-image: url('../images/frame1-3.png');
+ }
+ .img1 .frame1-4-img {
+	background-image: url('../images/frame1-4.png');
+ }
+ .img1 .frame1-5-img {
+	background-image: url('../images/frame1-5.png');
+ }
+ 
+ .img2 .frame2-1-img {
+	background-image: url('../images/frame2-1.png');
+ }
+ .img2 .frame2-2-img {
+	background-image: url('../images/frame2-2.png');
+ }
+ .img2 .frame2-3-img {
+	background-image: url('../images/frame2-3.png');
+ }
+ .img2 .frame2-4-img {
+	background-image: url('../images/frame2-4.png');
+ }
+
+.inpu1 input {
+  width: 187px;
+  float: left;
+  text-align: center;
+}
+
+.label1 label{
+  width: 189px !important;
+  float: left;
+  text-align: center;
+}
+.purpose-label label, .property-label  label{
+  padding: 68px;
+    color: #fff;
+}
+
+fieldset.feildset-purpose h2 {
+  color: #fff;
+}
+
+.property-label label {
+  padding: 54px;
+}
+.rounded-img {
+  border-radius: 50%;
+  height: 163px;
+  float: left;
+  overflow: hidden;
+  width: 163px;
+  border: 2px solid #000;
+  background-color: #fff;
+}
+
+.img3 {
+  float: left;
+  width: 204px;
+  overflow: hidden;
+  height: 168px;
+}
+
+
+
+.rounded-img .frame3-1-img{
+  background: url('../images/frame3-1.png');
+   background-repeat: no-repeat;
+  background-size: 100px;
+  background-position: 37px 22px;
+   
+}
+
+.rounded-img .frame3-2-img{
+  background: url('../images/frame3-2.png');
+   background-repeat: no-repeat;
+  background-size: 100px;
+  background-position: 37px 22px;
+   
+}
+.rounded-img .frame3-3-img{
+  background: url('../images/frame3-3.png');
+   background-repeat: no-repeat;
+  background-size: 100px;
+  background-position: 37px 22px;
+}
+.rounded-img .frame3-4-img{
+  background: url('../images/frame3-4.png');
+   background-repeat: no-repeat;
+  background-size: 100px;
+  background-position: 37px 22px;
+  
+}
+img{
+content:'';	
+}
+
+fieldset.fieldset_meal_plan_type label {
+ // padding: 30px;
+  color: #fff;
+ 
+}
+
+.fieldset_meal_plan_category label{
+	
+	//padding: 68px;
+  color: #fff;
+}
+
+.fieldset_things_todo label{
+	//padding: 30px;
+  color: #000;
+	
+}
+.fieldset_flight_assistance label{
+	//padding:85px;
+	color:#fff;
+}
+.fieldset_room_type label{
+	//padding:47px;
+	color:#fff;
+}
+
+.purpose-controls input{
+width:187px;
+text-align:center;
+margin:0 auto;
+
+}
+
+form > .rhino-container{
+width:100% !important;
+overflow:hidden;
+}
